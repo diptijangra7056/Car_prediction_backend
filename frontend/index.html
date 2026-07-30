@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Car Price Prediction</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🚗 Car Price Prediction</h1>
+
+        <div class="input-group">
+            <label for="Year">Year of Purchase</label>
+            <input
+                type="number"
+                id="Year"
+                placeholder="e.g. 2021"
+                min="1990"
+                max="2030"
+            >
+        </div>
+
+        <div class="input-group">
+            <label for="Mileage">Mileage (KM)</label>
+            <input
+                type="number"
+                id="Mileage"
+                placeholder="e.g. 45000"
+                min="0"
+            >
+        </div>
+
+        <button id="predictBtn">
+            Predict Price
+        </button>
+
+        <div id="loading" class="loading"></div>
+
+        <div id="result" class="result"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Car Price Prediction</h1>
+        <form method="POST" action="/predict">
+            <label for="Year">Year of Purchase:</label>
+            <input type="number" id="Year" name="Year" required>
+
+            <label for="Mileage">Mileage (in km):</label>
+            <input type="number" id="Mileage" name="Mileage" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result">
+                <h2>Predicted Price: ₹ {{ prediction }}</h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html> -->
